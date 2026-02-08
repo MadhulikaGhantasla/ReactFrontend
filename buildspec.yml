@@ -4,7 +4,7 @@ phases:
   pre_build:
     commands:
       - echo Logging in to DockerHub...
-      - echo "dckr_pat_S030zuGvjxgbNwUADuDkqc8NIKY" | docker login -u maddy0312 --password-stdin
+      - docker login -u $DOCKER_USERID -p $DOCKER_PASS
       - REPOSITORY_URI="docker.io/maddy0312/frontend"
       - CONTAINER_NAME="backend"
       - IMAGE_TAG="latest"
